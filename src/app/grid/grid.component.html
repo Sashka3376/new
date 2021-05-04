@@ -1,0 +1,84 @@
+<body>
+        
+    <header id="pageHeader">
+        
+        <div class="logo">
+            <div class="image_logo">
+               <!-- <embed type="image/svg+xml" src="images/logo.svg">  -->
+                <img src="assets\images\logo.png" >
+            </div>
+            <div class="text">
+              einna.tr
+            </div>
+          
+          </div>
+         
+
+         <div class="profile">
+          
+
+          <div class="container-2">
+
+            <div class="search_img">
+            <img  src="assets\images\ic_Search.png" alt="">
+          </div>
+          
+            <input  type="text" id="search" placeholder="             Search.." >
+          </div>
+     
+             <div class="user">
+                <div class="avatar">
+                  <img src="assets\images\Base.png" alt="">
+                  <div class="circle">
+                  <img src="assets\images\circle.png"  alt="" >
+                  </div>
+                </div>
+
+                <div class="nickname">
+                    <div>Dux Nguymen</div>
+                </div>
+                <div class="dropdown">
+                  <button (click)="myFunction()"  class="arrow"><img src="assets\images\Arrow.png" alt=""></button>
+                  <div id="myDropdown" class="dropdown-content">
+                     
+                    <a href="https://www.google.com/">
+                      <i class="fas fa-user-plus" ></i>
+                      Add a new account
+                    </a>
+                    <a href="https://www.google.com/">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Exid
+                    </a>
+                  </div>
+                </div>
+                
+               
+
+               
+            </div>    
+        </div>   
+          
+</header>
+
+
+    <article id="mainArticle">
+
+     <router-outlet>
+
+     </router-outlet>
+    </article>
+
+
+
+    <nav id="mainNav">
+
+         <div class="left_menu">
+            <app-dashboard></app-dashboard>
+            <app-user-study></app-user-study>
+            <app-launch></app-launch>
+            <app-view-archive></app-view-archive>
+            <app-my-account></app-my-account>
+        </div> 
+    </nav>
+  
+  </body>

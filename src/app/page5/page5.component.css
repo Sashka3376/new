@@ -1,0 +1,46 @@
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background: #ffffff;
+    width: 100%;
+  }
+.dashboard_text {
+    margin-left: 44px;
+    color: #6c757e;
+    font-size: 30px;
+    font-weight: 700;
+    font-family:'Arial';
+  }
+.right_cub {
+    width: 285px;
+    height: 100%;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    font-family:'Arial';
+
+  }
+
+.right_cub .image_report {
+    font-size: 25;
+    margin-left: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 31px;
+  }
+
+
+
+
+  .article{
+    background: #f2f2f2;
+    position: absolute;
+    top: 67px;
+    left: 0px;
+    height:483px;
+    right: 0;
+    margin:0px;
+
+  }
