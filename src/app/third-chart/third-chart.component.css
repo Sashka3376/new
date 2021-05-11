@@ -1,0 +1,26 @@
+
+.header{
+    height: 35px;
+    width: 293px;
+    background:  #fafafa;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px 10px 0px 0px;
+  
+}
+.text{
+    padding: 10px; 
+    color:#35373a; 
+    font-family:'Arial';
+    font-size: 14px;
+}
+
+
+.conteiner{
+
+ 
+    margin-left: 10px;
+    margin-right: 10px;
+ 
+}
+

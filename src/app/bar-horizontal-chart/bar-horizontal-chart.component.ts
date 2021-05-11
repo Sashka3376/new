@@ -111,9 +111,7 @@ export class BarHorizontalChartComponent implements AfterViewInit {
         
        options:{
 
-      
-
-        
+    
         indexAxis: 'y',
         elements: {
           bar: {

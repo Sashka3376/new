@@ -1,0 +1,33 @@
+
+
+
+.header{
+    height: 35px;
+    width:293px;
+    background:  #fafafa;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px 10px 0px 0px;
+  
+}
+.text{
+    padding: 10px; 
+    color:#35373a; 
+    font-family:'Arial';
+    font-size: 14px;
+}
+
+.donut-inner {
+    margin-top: -135px;
+    margin-bottom: 100px;
+    font-size: 35px;
+    color:#575d64; 
+    font-family:'Arial';
+ }
+.top{
+    margin-top: -135px;
+    margin-bottom: 100px;
+    margin-right: -50px;
+    color:#575d64; 
+    font-family:'Arial';
+}

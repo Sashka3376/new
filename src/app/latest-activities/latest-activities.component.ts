@@ -80,14 +80,14 @@ export class LatestActivitiesComponent implements AfterViewInit {
         
         type: 'line',
         data: {
-          labels: ['JUL16', '','JUL17', '', 'JUL18','' ,'JUL19','','JUL20'],
+          labels: ['JUL16', 'JUL17','JUL18', 'JUL19', 'JUL20','JUL21' ,'JUL22'],
     
 
 
 
          datasets: [ {
          
-         //  label: 'Latest Activities',
+       
          fill: {
           target: 'origin',
           above:  'rgba(71, 229, 183, 0.8)',   // Area will be red above the origin
@@ -100,34 +100,108 @@ export class LatestActivitiesComponent implements AfterViewInit {
           tension: 0.3
           }]
         },
+
+
         options: {
 
-          layout: {
-                    padding: {
-                        left: 30,
-                        right: 30,
-                        top: 40,
-                        bottom: 30
-                    }
-                },
-
-
-
-
-                scales: {
-                  y: {
-                  
-                   type: 'linear',
-                   
-                      max: 5,
-                      min: 0,
-                 
+          elements: {
+            point: {
+           
+              hoverBorderWidth:6,
+  
+            }
+          },
+  
+          plugins: {
+  
+  
+  
+            tooltip: {
+  
+              displayColors: false,
+              backgroundColor: '#6c757e',
+              titleColor: "white",
+              xAlign: 'center',
+              yAlign: 'bottom',
+              cornerRadius: 0,
+              usePointStyle: true,
+              callbacks: {
+  
+                label: function (context) {
+                  var label = '';
+                  if (context.parsed.y !== null) {
+                    label += (context.parsed.y)*1000 + ' Active users';;
                   }
+                  return label;
+                },
+               
               }
-
+  
+            },
+  
+  
+  
+  
+  
+            legend: {
+  
+              display: false,
+  
+            },
+  
+  
+          },
+  
+  
+      
+  
+  
+          scales: {
+  
+            x: {
+              
+              ticks: {
+                font: {
+                  size: 12,
+                },
+                color: '#6c757e',
+              },
+              grid: {
+                display: true,
+              },
+            },
+            y: {
+              type: 'linear',
                    
-
+              max: 5,
+              min: 0,
+             
+              ticks: {
+  
+                font: {
+                  size: 15,
+                },
+  
+                stepSize: 1,
+                color: '#6c757e',
+           
+                callback: function (value) {
+                  
+                  return value + "k"
+                }
+              },
+        
+              grid: {
+                display: true,
+              },
+             
+            }
           }
+        },
+
+
+        
+     
         });
     }
   }

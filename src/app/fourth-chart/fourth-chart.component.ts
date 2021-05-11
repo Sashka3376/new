@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {
   Chart,
   ArcElement,
@@ -63,60 +63,185 @@ export class FourthChartComponent implements AfterViewInit {
 
   constructor() { }
 
-  /*ngOnInit(): void {
-    this.createGraph();
-  }*/
+
 
   ngAfterViewInit(): void {
-    if(this.lineCanvas) {
+    if (this.lineCanvas) {
       this.lineChartMethod(this.lineCanvas);
     }
   }
 
 
 
-    lineChartMethod(el: ElementRef): void {
-      this.lineChart = new Chart(el.nativeElement, {
-        
-          type: 'line',
-          data: {
-            labels: ['','label','label','label','label',''],
-            datasets: [{ 
-                data: [35, 60, 50, 65, 20, 16],
-                label: "Car A - Speed (mph)",
-                borderColor: '#6a8ee3',
-                fill: false,
-                pointBackgroundColor:'#6a8ee3',
-                pointRadius:5,
-              }, { 
-                data: [50, 35, 82, 75, 45, 70],
-                label: "Car B - Speed (mph)",
-                borderColor: '#21c393',
-                fill: false,
-                pointBackgroundColor:'#21c393',
-                pointRadius:5
 
-              }, { 
-                data: [75, 15, 35, 33, 74, 30],
-                label: "Car c - Speed (mph)",
-                borderColor: '#fad567',
-                fill: false,
-                
-                pointBackgroundColor:'#fad567',
-                pointRadius:5
-              }, 
-            ]
-          },
-          options: {
-            layout: {
-              padding: {
-                left: 15,
-                right: 15,
-                top: 60,
-                bottom: 30
-              }
-          },
+  lineChartMethod(el: ElementRef): void {
+    this.lineChart = new Chart(el.nativeElement, {
+
+      type: 'line',
+      data: {
+
+        labels: ['', 'label', 'label', 'label', 'label', ''],
+        datasets: [{
+          data: [35, 60, 40, 5, 10, 6],
+          label: 'Information 01',
+          borderColor: '#6a8ee3',
+          fill: false,
+          pointBackgroundColor: '#6a8ee3',
+          pointRadius: 4,
+        }, {
+          data: [40, 25, 2, 5, 35, 6],
+          label: 'Information 02',
+          borderColor: '#21c393',
+          fill: false,
+          pointBackgroundColor: '#21c393',
+          pointRadius: 4
+
+        }, {
+          data: [6, 5, 25, 23, 6, 20],
+          label: 'Information 03',
+          borderColor: '#fad567',
+          fill: false,
+
+          pointBackgroundColor: '#fad567',
+          pointRadius: 4
+        },
+        ],
+
+      },
+
+
+      options: {
+
+        elements: {
+          point: {
+         
+            hoverBorderWidth:6,
+
           }
-        });
-    }
-  }      
+        },
+
+        plugins: {
+
+
+
+          tooltip: {
+
+            displayColors: false,
+            backgroundColor: '#6c757e',
+            titleColor: "white",
+            xAlign: 'center',
+            yAlign: 'bottom',
+            cornerRadius: 0,
+            usePointStyle: true,
+            callbacks: {
+
+              label: function (context) {
+                var label = '';
+                if (context.parsed.y !== null) {
+                  label += context.parsed.y + ' %';
+                }
+                return label;
+              },
+              title: function () {
+                return "";
+              }
+            }
+
+          },
+
+
+
+
+
+          legend: {
+
+
+
+
+            display: true,
+            position: 'top',
+            align: 'start',
+
+            labels: {
+
+
+              padding: 15,
+              boxWidth: 8,
+              textAlign: 'left',
+              usePointStyle: true
+
+            }
+
+          },
+
+
+        },
+
+
+        layout: {
+          padding: {
+            bottom: -5,
+            top: -5,
+
+
+          }
+        },
+
+
+        scales: {
+
+          x: {
+            stacked: true,
+            ticks: {
+              font: {
+                size: 12,
+              },
+              color: '#6c757e',
+            },
+            grid: {
+              display: true,
+            },
+          },
+          y: {
+            stacked: true,
+            ticks: {
+
+              font: {
+                size: 15,
+              },
+
+
+              color: '#6c757e',
+              stepSize: 25,
+              callback: function (value) {
+                return value + "%"
+              }
+            },
+            grid: {
+              display: true,
+            },
+            suggestedMin: 0,
+            suggestedMax: 100,
+          }
+        }
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+  }
+}

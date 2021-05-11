@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {
   Chart,
   ArcElement,
@@ -63,7 +63,7 @@ export class SecondChartComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    if(this.doughnutCanvas) {
+    if (this.doughnutCanvas) {
       this.doughnutChartMethod(this.doughnutCanvas);
     }
   }
@@ -72,48 +72,91 @@ export class SecondChartComponent implements AfterViewInit {
     this.doughnutChart = new Chart(el.nativeElement, {
       type: 'doughnut',
 
-      data : {
+      data: {
 
         labels: [
-            'Red',
-            'Yellow',
-            'Blue',
+          'Information 01',
+          'Information 02',
+          'Information 03',
         ],
-          datasets: [{
-              data: [40,30,30],
-              backgroundColor: [
-                  'rgba(210,212,216,1)',
-                  'rgba(174, 233, 215, 1)',
-                  'rgba(50, 153, 123, 1)',
-  
-              ],
-              borderColor: [
-                'rgba(210,212,216,1)',
-                'rgba(174, 233, 215, 1)',
-                'rgba(50, 153, 123, 1)',
-              ],
-              borderWidth: 1
-  
-          }],
-  
-          // These labels appear in the legend and in the tooltips when hovering different arcs
-  
+
+
+        datasets: [{
+          data: [26, 32, 42],
+
+
+          backgroundColor: [
+            'rgba(174, 233, 215, 1)',
+            'rgba(50, 153, 123, 1)',
+            'rgba(210,212,216,1)',
+          ],
+          borderColor: [
+            'rgba(174, 233, 215, 1)',
+            'rgba(50, 153, 123, 1)',
+            'rgba(210,212,216,1)',
+          ],
+
+          borderWidth: 1,
+
+
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+
       },
 
-    options: {
+      options: {
+        plugins: {
+          tooltip: {
 
-    layout: {
-      padding: {
+            displayColors: false,
+            backgroundColor: '#6c757e',
+            titleColor: "white",
+            xAlign: 'center',
+            yAlign: 'bottom',
+            cornerRadius: 0,
+            usePointStyle: true,
+            callbacks: {
 
-          top: 55,
-          bottom: 10
+              label: function (context) {
+                var label = context.dataset.label || '';
+                if (context.parsed !== null) {
+                  label += context.parsed + ' %';
+                }
+                return label;
+              },
+              title: function () {
+                return "";
+              }
+            }
+          },
+          legend: {
+            display: true,
+            position: 'top',
+            align: 'start',
+
+
+            labels: {
+              boxWidth: 10,
+              padding: 15,
+
+            }
+
+          },
+
+        },
+        cutout: 95,
+        layout: {
+          padding: {
+        
+
+          }
+        },
+        radius: 85,
+
+
       }
-  },
 
-rotation:2.2,
-      
-    }
-     
     });
   }
 

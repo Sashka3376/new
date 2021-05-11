@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {
   Chart,
   ArcElement,
@@ -54,7 +54,8 @@ Chart.register(
   templateUrl: './first-chart.component.html',
   styleUrls: ['./first-chart.component.css']
 })
-export class FirstChartComponent implements  AfterViewInit {
+
+export class FirstChartComponent implements AfterViewInit {
   @ViewChild('barCanvas') private barCanvas?: ElementRef;
   barChart: any;
 
@@ -68,43 +69,106 @@ export class FirstChartComponent implements  AfterViewInit {
   }*/
 
   ngAfterViewInit(): void {
-    if(this.barCanvas) {
+    if (this.barCanvas) {
       this.barChartMethod(this.barCanvas);
     }
   }
 
 
+  barChartMethod(el: ElementRef): void {
+    this.barChart = new Chart(el.nativeElement, {
+      type: 'bar',
+      data: {
+        labels: ['item', 'item', 'item', 'item'],
+        datasets: [{
+          data: [40, 60, 50, 82],
 
-    barChartMethod(el: ElementRef): void {
-      this.barChart = new Chart(el.nativeElement, {
-        type: 'bar',
-        data: {
-          labels: ['BJP', 'INC', 'AAP', 'CPI', 'CPI-M', 'NCP'],
-          datasets: [{
-            label: '# of Votes',
-            data: [200, 50, 30, 15, 20, 34],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255,99,132,1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-          }]
+          backgroundColor: [
+            'rgba(174, 233, 215, 1)',
+            'rgba(98, 220, 184, 1)',
+            'rgba(33, 195, 147, 1)',
+            'rgba(50, 153, 123, 1)',
+
+          ],
+          borderColor: [
+            'rgba(174, 233, 215, 1)',
+            'rgba(98, 220, 184, 1)',
+            'rgba(33, 195, 147, 1)',
+            'rgba(50, 153, 123, 1)',
+
+          ],
+          borderWidth: 1
+        }]
+      },
+
+      options: {
+
+        plugins: {
+          tooltip: {
+
+            displayColors: false,
+            backgroundColor: '#6c757e',
+            titleColor: "white",
+            xAlign: 'center',
+            yAlign: 'bottom',
+            cornerRadius: 0,
+            usePointStyle: true,
+            callbacks: {
+
+              label: function (context) {
+                var label = context.dataset.label || '';
+                if (context.parsed.y !== null) {
+                  label += context.parsed.y + ' %';
+                }
+                return label;
+              },
+              title: function () {
+                return "";
+              }
+            }
+          },
+
+          legend: {
+            display: false,
+
+          }
         },
-       
-      });
-    }
-  
+        scales: {
+
+          x: {
+            ticks: {
+              font: {
+                size: 15,
+              },
+              color: '#6c757e',
+            },
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            ticks: {
+              font: {
+                size: 15,
+              },
+              color: '#6c757e',
+              stepSize: 25,
+              callback: function (value) {
+                return value + "%"
+              }
+            },
+            grid: {
+              display: true,
+            },
+            suggestedMin: 10,
+            suggestedMax: 100,
+          }
+        }
+      }
+
+
+    });
   }
+
+}
 
