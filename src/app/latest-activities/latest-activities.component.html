@@ -1,14 +1,46 @@
 
 
   <div class="header">
-    <div class="text" align="left">
-      <strong>Latest Activities</strong>
+    <div class="text" align="left" >
+      <div><strong >Latest Activities</strong></div>
+      
     </div>
-  
+    
+
+    
   </div>
   
-  <div class="conteiner" >
-    <div >
-      <canvas #lineCanvas width="17" height="10"  ></canvas>
+  <div class="tab-frame"  >
+    <input type="radio"  name="tab" id="tab1"   >
+    <label for="tab1" ><strong>Mounth</strong></label>
+      
+    <input type="radio" checked name="tab" id="tab2">
+    <label for="tab2"><b>Week</b></label>
+    
+    <input type="radio" name="tab" id="tab3">
+    <label for="tab3"><b>Day</b></label>
+   
+    <div class="tab">
+      <div class="text-center">
+      <svg class="mat-newloader" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"  >
+        <circle cx="50" cy="50" r="45" fill="transperant" stroke="#f00" stroke-width="10"/>
+      </svg>
     </div>
   </div>
+    <div class="tab">
+      <div class="conteiner" >
+        <div >
+          <canvas #lineCanvas width="17" height="10"  ></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="tab">
+        <div class="text-center">
+        <svg class="mat-newloader" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"  >
+          <circle cx="50" cy="50" r="45" fill="transperant" stroke="#f00" stroke-width="10"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  
