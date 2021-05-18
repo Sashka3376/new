@@ -47,9 +47,12 @@
   }
 
 
+  
+
   .text-center{text-align:center}
   .mat-newloader{ animation: 2s linear infinite mar-newlod;
-    max-width: 100px;
+    max-width: 130px;
+    margin: 140px; 
   }
   
   @keyframes mar-newlod {
@@ -66,11 +69,12 @@
     animation: 1.4s ease-in-out infinite both circle-animation-mat;
     display: block;
     fill: transparent;
-    stroke: #ff2562;
+    stroke: #6c757e;
     stroke-dasharray: 263;
     stroke-dashoffset: 260;
     stroke-width: 10px;
     transform-origin: 50% 50%;
+ 
   }
   
   

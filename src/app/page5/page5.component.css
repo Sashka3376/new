@@ -44,3 +44,50 @@
     margin:0px;
 
   }
+
+  
+  .text-center{text-align:center}
+  .mat-newloader{ animation: 2s linear infinite mar-newlod;
+    max-width: 130px;
+    margin: 140px; 
+  }
+  
+  @keyframes mar-newlod {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg)
+    }
+  }
+  
+  
+  .mat-newloader circle {
+    animation: 1.4s ease-in-out infinite both circle-animation-mat;
+    display: block;
+    fill: transparent;
+    stroke: #6c757e;
+    stroke-dasharray: 263;
+    stroke-dashoffset: 260;
+    stroke-width: 10px;
+    transform-origin: 50% 50%;
+ 
+  }
+  
+  
+  @keyframes circle-animation-mat {
+    0%,
+    25% { 
+      stroke-dashoffset: 260;
+      transform: rotate(0);
+    }
+    50%,
+    75% {
+      stroke-dashoffset: 75;
+      transform: rotate(45deg);
+    }
+    100% {
+      stroke-dashoffset: 260;
+      transform: rotate(360deg);
+    }
+  }
