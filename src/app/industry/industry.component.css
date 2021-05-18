@@ -101,7 +101,7 @@
   
   .gauge {
   
-    transform: rotate(-160deg)
+    transform: rotate(-104deg)
   
   }
   
@@ -110,8 +110,8 @@
   
   
   .needle2 {
-    margin-top:-175px;
-    margin-left:90px;
+    margin-top:-200px;
+    margin-left:20px;
   position: absolute;
   display:none;
   z-index:9;
