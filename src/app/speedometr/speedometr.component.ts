@@ -55,6 +55,7 @@ Chart.register(
   styleUrls: ['./speedometr.component.css']
 })
 export class SpeedometrComponent implements AfterViewInit {
+  
   ngAfterViewInit() {
     window.onload = function() {
       var newVal = 110;

@@ -1,9 +1,10 @@
 .meter { 
-    height: 5px;
+    height: 10px;
     position: relative;
-    background: #3e32e4;
-    
-    width: 400px;
+    background: #fafafa;
+    margin-left: 140px;
+    margin-top: -25px;
+    width: 300px;
     overflow: hidden;
 }
 
@@ -13,9 +14,8 @@
 }
 
 .progress {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(120,115,116,1) 35%, rgba(0,212,255,1) 100%);
-
+  background:rgba(240,76,56,1);
+  background: linear-gradient(90deg,rgba(240,76,56,1)  0%,rgba(34,195,147,1)  100%);
     -webkit-animation: progressBar 3s ease-in-out;
     animation: progressBar 3s ease-in-out;
     -webkit-animation-fill-mode:both; 
@@ -40,3 +40,68 @@
     0% { width: 0; }
     100% { width: 100%; }
   }
+
+
+  .conteiner{
+    height: 150px;
+    width: 450px;
+    margin-left: 20px;
+
+  
+  }
+ 
+.tech{
+  width:450px;
+  height: 50px;
+
+}
+.assecc{
+ 
+    width:450px;
+    height: 50px;
+  
+  
+}
+.secure{
+  width:450px;
+  height: 50px;
+
+}
+.rightpic1{
+   margin-left: -415px;
+   margin-top: -5px;
+ }
+ .rightpic2{
+  margin-left: -415px;
+  margin-top: -25px;
+}
+.rightpic3{
+  margin-left: -415px;
+  margin-top: -25px;
+}
+.tech1{
+ 
+}
+
+  /* .content .sixteen .meter_1 {
+    width: 70%;
+    height: 10px;
+    position: relative;
+    background: #f2f2f2;
+    transform: translate(155px, 0px);
+  }
+  .content .sixteen .meter_2 {
+    width: 70%;
+    height: 10px;
+    position: relative;
+    background: #f2f2f2;
+    transform: translate(155px, 5px);
+  }
+  .content .sixteen .meter_3 {
+    width: 70%;
+    height: 10px;
+    position: relative;
+    background: #f2f2f2;
+    transform: translate(155px, 10px);
+  } */
+  

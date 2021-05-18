@@ -1,0 +1,203 @@
+
+.header{
+    height: 40px;
+    width: 245px;
+    background:  #fafafa;
+    
+    padding: 0;
+    margin-top: -20px;
+    border-radius: 10px 10px 0px 0px;
+  
+  }
+  .text{
+    padding: 10px; 
+    color:#35373a; 
+    font-family:'Arial';
+    font-size: 15px;
+    
+  }
+  .conteiner{
+    height: 200px;
+    width: 220px;
+    margin-left: 25px;
+    margin-top:20px;    
+  }
+  
+  
+  
+  
+  .cont{
+  
+    margin-top: 0px;
+      margin-left: -3px;
+      margin-right: 0px;
+      margin-bottom:0px;
+      width:200px;
+      height: 100px;
+      position: absolute;
+      overflow: hidden;
+     
+      /* transform: translate(-5%, -5%); */
+    z-index: 0;
+    
+    }
+  
+  
+  .gauge-a {
+    z-index: 1;
+    position: absolute;
+    background-color: #fafafa;
+    width: 200px;
+    height: 100px;
+    top: 0%;
+    border-radius: 250px 250px 0px 0px;
+  }
+  
+  .gauge-b {
+    z-index: 3;
+    position: absolute;
+    background-color: #fff;
+    width: 125px;
+    height: 65.5px;
+    top: 37.5px;
+    margin-left: 37.5px;
+    margin-right: auto;
+    border-radius: 250px 250px 0px 0px;
+  }
+  
+  #gauge-c {
+    z-index: 2;
+    position: absolute;
+    background: rgb(55,199,139);
+    background: linear-gradient(90deg, rgba(55,199,139,1) 0%, rgba(243,225,66,1) 35%, rgba(244,71,54,1) 100%);
+    width: 200px;
+    height: 100px;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 200px 200px;
+    transform-origin: center top;
+    animation: anom 2s 1 both ;
+
+  }
+  
+  
+  @-webkit-keyframes anom {
+	0% {transform: rotate(0);}
+  100% {
+  
+    transform: rotate(160deg)}
+}
+
+@keyframes anom {
+	0% {transform: rotate(0);}
+  100% {
+ 
+    transform: rotate(160deg)}
+}
+  
+  
+  
+  
+  .gauge {
+  
+    transform: rotate(-160deg)
+  
+  }
+  
+  
+  
+  
+  
+  .needle2 {
+    margin-top:-175px;
+    margin-left:90px;
+  position: absolute;
+  display:none;
+  z-index:9;
+
+
+}
+
+
+  
+  .four.rischio2 .needle2 {animation: fourspeed2 1s 1 both; animation-delay: 0.5s; display:block;} 
+  
+  
+  @-webkit-keyframes fourspeed2 {
+      0% {transform: rotate(0);}
+    100% {
+      transform-origin: bottom left  ;
+      transform: rotate(160deg)}
+  }
+  
+  @keyframes fourspeed2 {
+      0% {transform: rotate(0);}
+    100% {
+      transform-origin: bottom left ;
+      transform: rotate(160deg)}
+  }
+  
+  
+  
+  
+  .line1 {
+    text-align: center; /* Выравниваем текст по центру */
+    border-top: 1px dashed #f2f2f2; /* Параметры линии  */
+    width:57%;
+    margin-top: 100px;
+    margin-left: 35px;
+  
+  
+   }
+  
+  
+   .line2 {
+    text-align: center; /* Выравниваем текст по центру */
+    border-top: 1px dashed #f2f2f2; /* Параметры линии  */
+    width:40%;
+    margin-top:-55px;
+    margin-left: 52px;
+    transform: rotate(90deg);
+   
+    
+   }
+  
+  
+  .text1{
+    color:#8d9293;
+    margin-top:60px;
+    margin-left: -191px;
+  }
+  
+  .text2{
+    color:#10ccf1;
+    margin-top:-19px;
+    margin-left: 140px;
+  }
+  
+  .text_number{
+   
+    margin-left:-160px;
+  }
+  
+  .image_status{
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  .box{
+    width: 300px;
+    height: 60px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

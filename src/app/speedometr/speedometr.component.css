@@ -131,24 +131,54 @@ z-index:9;
 
 
 
-.line {
+.line1 {
   text-align: center; /* Выравниваем текст по центру */
-  border-top: 2px dashed #fafafa; /* Параметры линии  */
-  width:55%;
+  border-top: 1px dashed #f2f2f2; /* Параметры линии  */
+  width:57%;
   margin-top: 100px;
   margin-left: 35px;
+
+
  }
 
 
+ .line2 {
+  text-align: center; /* Выравниваем текст по центру */
+  border-top: 1px dashed #f2f2f2; /* Параметры линии  */
+  width:40%;
+  margin-top:-55px;
+  margin-left: 52px;
+  transform: rotate(90deg);
+ 
+  
+ }
 
 
+.text1{
+  color:#8d9293;
+  margin-top:60px;
+  margin-left: -191px;
+}
 
+.text2{
+  color:#10ccf1;
+  margin-top:-19px;
+  margin-left: 140px;
+}
 
+.text_number{
+ 
+  margin-left:-160px;
+}
 
-
-
-
-
+.image_status{
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.box{
+  width: 300px;
+  height: 60px;
+}
 
 
 
