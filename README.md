@@ -1,13 +1,14 @@
 # MyFirstApp
 https://sashka3376.github.io/new/my-first-app/dashboard
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
 ## Development server
-
+https://sashka3376.github.io/new/
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
-
+https://sashka3376.github.io/new/my-first-app/
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
