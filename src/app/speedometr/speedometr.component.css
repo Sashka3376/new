@@ -43,8 +43,7 @@
   }
 
 
-
-
+  
 
 .gauge-a {
   z-index: 1;
@@ -84,6 +83,12 @@
   animation: anom2 2s 1 both ;
 
 }
+
+
+
+
+
+
 
 
 @-webkit-keyframes anom2 {

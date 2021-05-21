@@ -54,15 +54,12 @@ Chart.register(
   templateUrl: './speedometr.component.html',
   styleUrls: ['./speedometr.component.css']
 })
-export class SpeedometrComponent implements AfterViewInit {
-  
-  ngAfterViewInit() {
-    // window.onload = function() {
-    //   var newVal = 110;
-    //   var pVal = newVal ;
-    //   document.getElementById('gauge-c').setAttribute(
-    //     "style", "transform: rotate(" + newVal + "deg);");
-    //   document.getElementById("percent").innerHTML = pVal+"%";
-    // };
+export class SpeedometrComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+
   }
+
 }
