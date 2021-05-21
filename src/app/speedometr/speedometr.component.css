@@ -80,10 +80,25 @@
   margin-right: auto;
   border-radius: 0px 0px 200px 200px;
   transform-origin: center top;
-  transition: all 1s ease-in-out;
+  /* transition: all 1s ease-in-out; */
+  animation: anom2 2s 1 both ;
+
 }
 
 
+@-webkit-keyframes anom2 {
+0% {transform: rotate(0);}
+100% {
+
+  transform: rotate(110deg)}
+}
+
+@keyframes anom2 {
+0% {transform: rotate(0);}
+100% {
+
+  transform: rotate(110deg)}
+}
 
 
 

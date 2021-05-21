@@ -57,12 +57,12 @@ Chart.register(
 export class SpeedometrComponent implements AfterViewInit {
   
   ngAfterViewInit() {
-    window.onload = function() {
-      var newVal = 110;
-      var pVal = newVal ;
-      document.getElementById('gauge-c').setAttribute(
-        "style", "transform: rotate(" + newVal + "deg);");
-      document.getElementById("percent").innerHTML = pVal+"%";
-    };
+    // window.onload = function() {
+    //   var newVal = 110;
+    //   var pVal = newVal ;
+    //   document.getElementById('gauge-c').setAttribute(
+    //     "style", "transform: rotate(" + newVal + "deg);");
+    //   document.getElementById("percent").innerHTML = pVal+"%";
+    // };
   }
 }
